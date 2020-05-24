@@ -1,4 +1,4 @@
-package com.softserve.edu;
+package com.softserve.homework1;
 
 public class Appl {
     public static void main(String[] args) {
