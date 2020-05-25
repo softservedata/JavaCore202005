@@ -14,6 +14,7 @@ public class HomeWork3 {
             System.out.println("Enter three numbers below: ");
             for (int i = 0; i < 3; i++)
                 list.add(scanner.nextInt());
+            scanner.close();
         } catch (Exception ex) {
             System.out.println("Please, try again.");
         }
