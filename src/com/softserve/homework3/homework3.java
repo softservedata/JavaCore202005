@@ -11,17 +11,20 @@ public class homework3 {
 				
 		for (int i = 0; i < numbers.length; i++) {
 			
-		System.out.println("Enter the number " + (1+i));
+		//System.out.println("Enter the number " + (1+i));
 		Scanner scanner = new Scanner(System.in);
 		numbers [i] = scanner.nextDouble();
-		System.out.println("You number " +numbers[i]);
+		//System.out.println("You number " +numbers[i]);
+		
 		
 		}	
 		
 		Arrays.sort(numbers);
-		System.out.println(numbers[0]);
-		System.out.println(numbers[1]);
-		System.out.println(numbers[2]);
+	
+		//System.out.println(numbers);
 		
+		System.out.println(Arrays.toString(numbers));
+
+		}
 	}
-}
+
