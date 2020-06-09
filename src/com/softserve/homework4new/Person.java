@@ -8,8 +8,6 @@ public class Person {
     private String firstName;
     private String lastName;
     private int birthYear;
-   // String fn;
-    //String ln;
 
     public String getFirstName() {
         return firstName;
