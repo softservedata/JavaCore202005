@@ -16,8 +16,8 @@ public class Appl {
         b.add("1");
         b.add("2");
         b.add("3");
-        b.add("4");
-        b.add("5");
+        b.add("7");
+        b.add("8");
         List<String> intersection = new LinkedList<String>(a);
         intersection.retainAll(b);
         System.out.printf("Union of two Set %s and %s is %s %n",
