@@ -7,7 +7,7 @@ public class App {
         Square square1 = new Square(25);
         Square square2 = new Square(40);
         Square square3 = new Square(60);
-        
+
         Figure[] figures = new Figure[]{rectangle1,
         rectangle2, square1, square2, square3};
 
