@@ -14,11 +14,11 @@ public class App {
         Map <Integer, String> mapB = new HashMap <Integer,String>();
 
         for (Map.Entry <String, Integer> entry : mapA.entrySet()) {
-        mapB.put((entry.getValue()),(entry.getKey()));
-
+            mapB.put((entry.getValue()), (entry.getKey()));
+        }
             System.out.println(mapB);
             // mapB.put((mapA.getOrDefault()));
-        }
+
 
     }
 }
