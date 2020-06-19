@@ -1,8 +1,16 @@
 package com.softserve.edu.hw7;
 
+import com.sun.corba.se.impl.orbutil.CorbaResourceUtil;
+import com.sun.org.apache.bcel.internal.generic.RETURN;
+
 import java.util.*;
 
 public class App {
+    public List<String> buildlist(Set<String>animalSet,  Set<String>animalSet2){
+        Set<String> newAnimalSet3 = new HashSet<String>(animalSet);
+        newAnimalSet3.addAll(animalSet2);
+        return new ArrayList<>(newAnimalSet3);
+    };
     public static void main(String[] args) {
         Set<String> animalSet = new HashSet<String>();
         animalSet.add("Antilope");
@@ -28,9 +36,8 @@ public class App {
         animalSet2.add("Hippo");
         animalSet2.add("Cat");
 
-        Set<String> newAnimalSet = new HashSet<String>(animalSet);
-        newAnimalSet.retainAll(animalSet2);
-        System.out.println(newAnimalSet);
+        App app = new App();
+        System.out.println(app.buildlist(animalSet,  animalSet2));
 
         List<Integer> a = new ArrayList<>();
         a.add(9);
@@ -45,9 +52,14 @@ public class App {
         b.add(5);
         b.add(3);
 
-
-        if (a.containsAll(b) && b.containsAll(a))
-            System.out.println("Lists are equal");
+        Set<Integer> st1 = new HashSet<>(a);
+        Set<Integer> st2 = new HashSet<>(b);
+        if ((a.size() != b.size()) ||
+                (b.size() != a.size())){
+            System.out.println("not equal");
+        } else {
+            System.out.println("equal");
+        }
 
     }
 }
