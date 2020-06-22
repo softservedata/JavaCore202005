@@ -1,8 +1,10 @@
 package com.softserve.homework10;
 
+import java.util.*;
+
 public class Part1 {
     public static void main(String[] args) {
-        String json = "{\"id\":\"123\",\"name\":\"Ivan\",\"email\":\"ivan@gmail.com\",\"city\":\"Lviv\"}";
+        String json = "\"id\":\"123\",\"name\":\"Ivan\",\"email\":\"ivan@gmail.com\",\"city\":\"Lviv\"";
 
         List<String> list = Arrays.asList(json.replaceAll("\"", ""));
         String ss = list.get(0);
@@ -10,7 +12,7 @@ public class Part1 {
         List<String> list1 = new ArrayList<>();
 
         String[] arr = ss.split("[(,)]");
-        String[] arr2 = null;
+        String[] arr2;
         for (String s : arr) {
             arr2 = s.split("[(:)]");
             for (String s1 : arr2) {
