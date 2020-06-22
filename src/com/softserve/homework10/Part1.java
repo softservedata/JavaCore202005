@@ -4,9 +4,10 @@ import java.util.*;
 
 public class Part1 {
     public static void main(String[] args) {
-        String json = "\"id\":\"123\",\"name\":\"Ivan\",\"email\":\"ivan@gmail.com\",\"city\":\"Lviv\"";
+        String json = "{\"id\":\"123\",\"name\":\"Ivan\",\"email\":\"ivan@gmail.com\",\"city\":\"Lviv\"}";
 
-        List<String> list = Arrays.asList(json.replaceAll("\"", ""));
+        List<String> list0 = Arrays.asList(json.replaceAll("^.|.$", ""));
+        List<String> list = Arrays.asList(list0.get(0).replaceAll("\"", ""));
         String ss = list.get(0);
         Map<String, String> map = new HashMap<>();
         List<String> list1 = new ArrayList<>();
