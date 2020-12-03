@@ -19,7 +19,7 @@ public class MainClass {
 //        System.out.println("Result = " + rez);
         sum(var1, var2);
 
-        int var3 = 45;
+        int var3 = 55;
 //        int rez1 = var2 + var3;
 //        System.out.println("Result 1 = " + rez1);
         sum(var2, var3);
