@@ -1,0 +1,28 @@
+
+#General_1
+autorization.button.enter = xpath(//*/button[2])
+autorization.field.inputNumber = xpath(//*[@placeholder='+38(050) XXX XX XX'])
+autorization.button.forgetPassword = xpath(//*/button[1])
+autorization.button.invalidMobile = xpath(//button[@type='button'])
+
+#General_2
+autorization.field.password = xpath(//*[@type='password'])                      
+autorization.button.forgetPassword = xpath(//*/button[1]]
+autorization.button.forgetPassword = xpath(//*/button[2])
+autorization.button.invalidPassword = xpath(//button[@type='button'])
+
+#Restore Pass 1
+Restore.field.inputNumber = xpath(//*[@placeholder='+38(050) XXX XX XX'])
+Restore.button.back=xpath(.//button[@color='warn'])
+Restore.button.sentSMS=xpath(.//button[@color='accent'])
+
+#Restore Pass 2
+Restore.field.inputPassWithSMS = xpath(//input)
+Restore.button.checkPassWithSMS=xpath(.//button[@color='accent'])
+Restore.button.invalidPasWithSMS = xpath(///button[@type='button'])
+Restore.button.back=xpath(.//button[@color='warn'])
+
+#Restore Pass 3
+input.newPass = xpath(//*[@formcontrolname='password'])
+confirm.newPass = xpath(//*[@formcontrolname='confirmPassword'])
+buttonsave=xpath(//button[@color='accent'])
