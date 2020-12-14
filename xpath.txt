@@ -2,12 +2,11 @@
 #General_1
 autorization.button.enter = xpath(//*/button[2])
 autorization.field.inputNumber = xpath(//*[@placeholder='+38(050) XXX XX XX'])
-autorization.button.forgetPassword = xpath(//*/button[1])
+autorization.button.forgetPasswrd = xpath(//*/button[1])
 autorization.button.invalidMobile = xpath(//button[@type='button'])
 
 #General_2
-autorization.field.password = xpath(//*[@type='password'])                      
-autorization.button.forgetPassword = xpath(//*/button[1]]
+autorization.field.password = xpath(//*[@type='password'])                      autorization.button.forgetPassword = xpath(//*/button[1]]
 autorization.button.forgetPassword = xpath(//*/button[2])
 autorization.button.invalidPassword = xpath(//button[@type='button'])
 
