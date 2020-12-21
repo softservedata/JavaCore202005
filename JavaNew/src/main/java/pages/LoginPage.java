@@ -1,8 +1,9 @@
 package pages;
 
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 public class LoginPage extends ParentPage {
 
 
@@ -10,6 +11,15 @@ public class LoginPage extends ParentPage {
 
         super(webDriver);
     }
+
+    @FindBy(xpath = "//*[@placeholder='+38(050) XXX XX XX']")
+    private WebElement inputMobile;
+
+    @FindBy(xpath = "//*[@type='password']")
+    private WebElement inputPassword;
+
+    @FindBy(xpath = "//*/button[2]")
+    private WebElement clickOnEnterButton;
 
     public void openPage() {
 
@@ -22,35 +32,38 @@ public class LoginPage extends ParentPage {
         }
     }
 
-    public void enterTextInputLogin(String login) {
-        try {
-            webDriver.findElement(By.xpath("//*[@placeholder='+38(050) XXX XX XX']")).clear();
-            webDriver.findElement(By.xpath("//*[@placeholder='+38(050) XXX XX XX']")).sendKeys(login);
-            System.out.println(login + " was inputted");
-        } catch (Exception e) {
-            System.out.println("Can not work with element" + e);
-            Assert.fail("Can not work with element" + e);
-        }
+    public void enterMobileInputLogin(String login) {
+//        try {
+//            inputMobile.clear();
+//            inputMobile.sendKeys(login);
+//            System.out.println(login + " was inputted");
+//        } catch (Exception e) {
+//            System.out.println("Can not work with element" + e);
+//            Assert.fail("Can not work with element" + e);
+//        }
+        actionsWithOurElements.enterTextInToElement(inputMobile, login);
 
     }
     public void clickOnButtonSubmit() {
-        try {
-            webDriver.findElement(By.xpath("//*/button[2]")).click();
-            System.out.println(" Button was clicked");
-        } catch (Exception e) {
-            System.out.println("Can not work with element" + e);
-            Assert.fail("Can not work with element" + e);
-        }
+//        try {
+//            clickOnEnterButton.click();
+//            System.out.println(" Button was clicked");
+//        } catch (Exception e) {
+//            System.out.println("Can not work with element" + e);
+//            Assert.fail("Can not work with element" + e);
+//        }
+        actionsWithOurElements.clickOnElement(clickOnEnterButton);
 
     }
     public void enterPassLogin(String pass) {
-        try {
-            webDriver.findElement(By.xpath("//*[@type='password']")).sendKeys(pass);
-            System.out.println(pass + " was inputted");
-        } catch (Exception e) {
-            System.out.println("Can not work with element" + e);
-            Assert.fail("Can not work with element" + e);
-        }
+//        try {
+//            inputPassword.sendKeys(pass);
+//            System.out.println(pass + " was inputted");
+//        } catch (Exception e) {
+//            System.out.println("Can not work with element" + e);
+//            Assert.fail("Can not work with element" + e);
+//        }
+        actionsWithOurElements.enterTextInToElement(inputPassword, pass);
 
     }
 
