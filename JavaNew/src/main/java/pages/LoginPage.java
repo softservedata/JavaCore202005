@@ -25,9 +25,9 @@ public class LoginPage extends ParentPage {
 
         try {
             webDriver.get("http://b2b-pds.stage.k8s.mc.gcf/");
-            System.out.println("Login page was opened");
+            logger.info("Login page was opened");
         } catch (Exception e) {
-            System.out.println("Can not open Login Page" + e);
+            logger.error("Can not open Login Page" + e);
             Assert.fail("Can not open Login Page" + e);
         }
     }
@@ -67,4 +67,14 @@ public class LoginPage extends ParentPage {
 
     }
 
+
+    public void loginInSite(String loginInSite, String passWord) {
+        openPage();
+        enterMobileInputLogin(loginInSite);
+        clickOnButtonSubmit();
+        enterPassLogin(passWord);
+        clickOnButtonSubmit();
+
+
+    }
 }

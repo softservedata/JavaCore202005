@@ -16,6 +16,7 @@ public class ParentTest {
     protected LoginPage loginPage;
     protected HomePage homePage;
 
+
     @Before
     public void setUp() {
         File file = new File("./src/driver/chromedriver.exe");

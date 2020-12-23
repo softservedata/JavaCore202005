@@ -13,7 +13,12 @@ public class LoginWithPageObject extends ParentTest {
         loginPage.clickOnButtonSubmit();
 
 
-        checkExpectedResult("Person isn't it", homePage.isPersonPresent());
+        checkExpectedResult("Person isn't it", homePage.isAvatarPresent());
     }
 
+    @Test
+    public void invalidLogin() {
+        loginPage.loginInSite("+380635920000", "1");
+        checkExpectedResult("Invalid mobile number", !homePage.isAvatarPresent());
+    }
 }
