@@ -7,13 +7,14 @@ public class LoginWithPageObject extends ParentTest {
     @Test
     public void validLogin() {
         loginPage.openPage();
-        loginPage.enterMobileInputLogin("+380635929001");
+        loginPage.enterMobileInputLogin("+380632978641");
         loginPage.clickOnButtonSubmit();
         loginPage.enterPassLogin("1");
         loginPage.clickOnButtonSubmit();
 
 
-        checkExpectedResult("Person isn't it", homePage.isPersonPresent());
+        checkExpectedResult("Person isn't it", homePage.isAvatarPresent());
     }
+
 
 }

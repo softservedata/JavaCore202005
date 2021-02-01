@@ -21,50 +21,57 @@ public class LoginPage extends ParentPage {
     @FindBy(xpath = "//*/button[2]")
     private WebElement clickOnEnterButton;
 
+    @FindBy(xpath = "//button[@type='button']")
+    private  WebElement invalidLoginButtonOk;
+
     public void openPage() {
 
         try {
             webDriver.get("http://b2b-pds.stage.k8s.mc.gcf/");
-            System.out.println("Login page was opened");
+            logger.info("Login page was opened");
         } catch (Exception e) {
-            System.out.println("Can not open Login Page" + e);
+            logger.error("Can not open Login Page" + e);
             Assert.fail("Can not open Login Page" + e);
         }
     }
 
     public void enterMobileInputLogin(String login) {
-//        try {
-//            inputMobile.clear();
-//            inputMobile.sendKeys(login);
-//            System.out.println(login + " was inputted");
-//        } catch (Exception e) {
-//            System.out.println("Can not work with element" + e);
-//            Assert.fail("Can not work with element" + e);
-//        }
+
         actionsWithOurElements.enterTextInToElement(inputMobile, login);
 
     }
     public void clickOnButtonSubmit() {
-//        try {
-//            clickOnEnterButton.click();
-//            System.out.println(" Button was clicked");
-//        } catch (Exception e) {
-//            System.out.println("Can not work with element" + e);
-//            Assert.fail("Can not work with element" + e);
-//        }
+
         actionsWithOurElements.clickOnElement(clickOnEnterButton);
 
     }
     public void enterPassLogin(String pass) {
-//        try {
-//            inputPassword.sendKeys(pass);
-//            System.out.println(pass + " was inputted");
-//        } catch (Exception e) {
-//            System.out.println("Can not work with element" + e);
-//            Assert.fail("Can not work with element" + e);
-//        }
+
         actionsWithOurElements.enterTextInToElement(inputPassword, pass);
 
     }
 
+
+    public void loginInSiteInvalid(String loginInSiteInvalid) {
+        openPage();
+        enterMobileInputLogin(loginInSiteInvalid);
+        clickOnButtonSubmit();
+
+
+    }
+    public void loginEnterSite(String login, String pass) {
+        openPage();
+        enterMobileInputLogin(login);
+        clickOnButtonSubmit();
+        enterPassLogin(pass);
+        clickOnButtonSubmit();
+
+    }
+
+
+    public boolean isWindowErrorMessage() {
+
+        return actionsWithOurElements.isElementPresent(invalidLoginButtonOk);
+    }
 }
+

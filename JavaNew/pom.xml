@@ -61,6 +61,12 @@
         <artifactId>selenium-chrome-driver</artifactId>
         <version>3.141.59</version>
     </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>compile</scope>
+        </dependency>
 
 
     </dependencies>
@@ -100,5 +106,10 @@
         </resources>
     </build>
 
-
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <allure.version>1.4.23</allure.version>
+        <aspectj.version>1.8.9</aspectj.version>
+    </properties>
 </project>
