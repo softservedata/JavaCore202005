@@ -16,5 +16,6 @@ public class ParentPage {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         actionsWithOurElements = new ActionsWithOurElements(webDriver);
+
     }
 }

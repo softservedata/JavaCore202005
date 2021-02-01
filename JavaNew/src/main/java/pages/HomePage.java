@@ -11,16 +11,18 @@ public class HomePage extends ParentPage {
 
     @FindBy(xpath = "//header/div[1]/a")
     private WebElement avatar;
-
+    @FindBy(xpath = "//*[@id=\"mat-dialog-0\"]/ng-component/div[2]/button")
+    private WebElement errorMobileDD;
 
     public boolean isAvatarPresent() {
-//        try {
-//            return avatar.isDisplayed();
-//
-//        } catch (Exception e) {
-//            return false;
-//        }
-    return actionsWithOurElements.isElementPresent(avatar);
+
+        return actionsWithOurElements.isElementPresent(avatar);
 
     }
+
+    public boolean isErrorMobileDDPresent() {
+
+        return actionsWithOurElements.isElementPresent(errorMobileDD);
+    }
 }
+
