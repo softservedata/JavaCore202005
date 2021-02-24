@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,6 +25,7 @@ public class LoginPage extends ParentPage {
     @FindBy(xpath = "//button[@type='button']")
     private  WebElement invalidLoginButtonOk;
 
+    @Step
     public void openPage() {
 
         try {
@@ -35,23 +37,27 @@ public class LoginPage extends ParentPage {
         }
     }
 
+    @Step
     public void enterMobileInputLogin(String login) {
 
         actionsWithOurElements.enterTextInToElement(inputMobile, login);
 
     }
+    @Step
     public void clickOnButtonSubmit() {
 
         actionsWithOurElements.clickOnElement(clickOnEnterButton);
 
     }
+
+    @Step
     public void enterPassLogin(String pass) {
 
         actionsWithOurElements.enterTextInToElement(inputPassword, pass);
 
     }
 
-
+    @Step
     public void loginInSiteInvalid(String loginInSiteInvalid) {
         openPage();
         enterMobileInputLogin(loginInSiteInvalid);
@@ -59,6 +65,7 @@ public class LoginPage extends ParentPage {
 
 
     }
+    @Step
     public void loginEnterSite(String login, String pass) {
         openPage();
         enterMobileInputLogin(login);
@@ -68,7 +75,7 @@ public class LoginPage extends ParentPage {
 
     }
 
-
+    @Step
     public boolean isWindowErrorMessage() {
 
         return actionsWithOurElements.isElementPresent(invalidLoginButtonOk);
