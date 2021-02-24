@@ -19,7 +19,7 @@ public class InvalidLoginWithParameters extends ParentTest {
     @Parameterized.Parameters(name = "Parameters are {0}")
     public static Collection testData() {
         return Arrays.asList(new Object[]{
-                "+380635929000", "+380695558787",
+                "+380635929000", "+380635558700",
                  });
 
     }
